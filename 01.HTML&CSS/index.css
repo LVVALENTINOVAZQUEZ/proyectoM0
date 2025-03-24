@@ -25,7 +25,9 @@ width: 888px;
 height: 33px;
 margin-top: 33px;
 margin-left: 273.22px;
-display: flex;
+
+
+
 
 
 }
@@ -36,6 +38,8 @@ header nav ul{
  justify-content: space-between;
  align-items: center;
  width: 888px;
+ 
+ 
 
 }
 
@@ -115,8 +119,8 @@ height: 117px;
 gap:0px;
 border-radius: 418px;
 background: #FFFF00;
-opacity: opx;
-text-align: cebter;
+opacity: 0px;
+text-align: center;
 display: flex;
 align-items: center;
 justify-content: center;

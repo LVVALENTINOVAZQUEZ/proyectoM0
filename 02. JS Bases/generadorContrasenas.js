@@ -1,44 +1,109 @@
 function checkLongitud(longitud) {
   /* TU CODIGO */
+  if (!longitud) return "debe ingresar la longitud"
+  if (typeof longitud !== "string") return "La longitud recibida no es válida"
+  if (longitud < 3) return  "La longitud debe ser mayor o igual a 3"
+  if (longitud > 10) return "La longitud debe ser menor o igual a 10"
+  return longitud
+
 
 }
 
-function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
+ function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
   /* TU CODIGO */
-  var letras = null;
+  var letras = "abcdefghijklmnñopqrstuvwxyz"  ;
 
-  var numeros = null;
+  var numeros = 1234567890;
 
-  var especiales = null;
+  var especiales = "!#$%&/()=?¿*¨¨[]{}+-@\¡|°";
 
-  var letrasMayusculas = null
+  var letrasMayusculas = letras.toUpperCase()
 
-  var caracteresDisponibles = null;
+  var caracteresDisponibles = letras;
 
-  if () {
+  if (incluirEspeciales) {
+    caracteresDisponibles += especiales
       
   }
 
-  if () {
+  if (incluirNumeros) {
+    caracteresDisponibles += numeros
       
   }
 
-  if () {
+  if (incluirMayusculas) {
+    caracteresDisponibles += letrasMayusculas
       
 
   }
 
-  var contrasena = null;
-
-  if () {
-
+  var contrasena = "";
+    if (longitud >= 3) { 
+      var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+    
+   }
+   if (longitud >= 4){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+   }
+      
+   if (longitud >= 5){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+    
+   }
+   if (longitud >= 6){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+    
+   }
+   if (longitud >= 7){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+   
+   }
+   if (longitud >= 8){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+     
+   }
+   if (longitud >= 9){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+      
+   }
+   if (longitud >= 10){
+    var índiceRandom = Math.floor(Math.random() * caracteresDisponibles.length)
+      var caracterRandom = caracteresDisponibles.charAt(índiceRandom)
+      contrasena = contrasena + caracterRandom
+    
+      
+   }
+   
+   return "Contraseña generada: " + contrasena;
   }
+  
 
-  return null;
-}
+  
+
 
 // <------- NO TOCAR -------->
 module.exports = {
   checkLongitud,
   generarContrasena,
 };
+ 

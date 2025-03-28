@@ -101,15 +101,7 @@ return codigoSecreto.toString() + cantidadIntentos.toString();
 
 
 }
-function validarSoloNumeros(codigo){
-  for (let i = 0; i < codigo.length; i++){
-    let char = codigo[i];
-    if (Number.isNaN(Number(char))){
-      return  "El codigo de desbloqueo solo puede estar conformado por numeros"
-  }
-  continue
-}
-}
+
 function validarNumerosRepetidos(codigo){
   /* TU CODIGO */
   
@@ -133,15 +125,17 @@ var contadorIntentos = 1
 function desbloquearCajaFuerte(codigoSecreto, cantidadIntentos, codigoDesbloqueo){
   /* TU CODIGO */
   if(codigoDesbloqueo.length !== 4) return "El codigo debe tener exactamente 4 digitos"
-  
-  validarSoloNumeros(codigoDesbloqueo);
-  if(validarNumerosRepetidos(codigoDesbloqueo)){
-    return "el codigo no puede tener numeros repetidos"
-  }
-  if (codigoDesbloqueo === codigoSecreto){
-    return "Acceso concedido despues de :" + contadorIntentos + " intentos";
 
-  } else{
+  for (let i = 0; i < codigoDesbloqueo.length; i++){
+    if (Number(codigoDesbloqueo[i]) || Number(codigoDesbloqueo[i]) === 0) continue
+    else return "El codigo de desbloqueo solo puede estar conformado por numeros"
+  }
+  if (validarNumerosRepetidos(codigoDesbloqueo)) return  "el codigo no puede tener numeros repetidos"
+
+  
+  if (codigoSecreto === codigoDesbloqueo) return "Acceso concedido despues de :" + contadorIntentos + " intentos";
+
+   else{
     switch (true) {
       case codigoDesbloqueo % 2 === 0:
         console.log("el codigo es divisible x 2")
@@ -153,13 +147,14 @@ function desbloquearCajaFuerte(codigoSecreto, cantidadIntentos, codigoDesbloqueo
       default:
         console.log("codigo incorrecto")
         break;
-    }
-  }
-  contadorIntentos++;
-  if (contadorIntentos > cantidadIntentos)
-    return  "Acceso denegado. Se agotaron los intentos"
+      }
+      }
+      contadorIntentos++; 
+      
+      if (contadorIntentos > cantidadIntentos) return  "Acceso denegado. Se agotaron los intentos"
+  
 
-}
+      }
 
 // <------- NO TOCAR -------->
 module.exports = {

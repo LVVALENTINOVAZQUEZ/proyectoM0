@@ -186,7 +186,10 @@ function agregarActividad(descripcion, nivelRiesgo){
 
 function eliminarActividad(indice){
     /* TU CODIGO */
-    
+    if(isNaN(indice)) return  "El indice no es valido, debe ser un numero"
+    if(indice < 0 || indice >= actividadesSospechozas.length) return "El indice no es valido, se encuentra fuera del rango"
+    actividadesSospechozas.splice(indice, 1)
+    return "Actividad eliminada con exito"
 }
 
 function filtrarActividadesPorRiesgo(nivelRiesgo){
@@ -200,21 +203,20 @@ function filtrarActividadesPorRiesgo(nivelRiesgo){
 
      if(nuevoArray.length > 0) return nuevoArray
      return "No hay actividades con este nivel de riesgo"
-
+     
 
     }
 
 
 function generarReporteDeActividades(){
     /* TU CODIGO */
-    
-    var nuevoArray = []
-    if (actividadesSospechozas.length > 0){
-        for (var i = 0; i < actividadesSospechozas.length; i++){
-            nuevoArray.push(`Id: ${i}, ${actividadesSospechozas[i]}`)
-        }
-            return nuevoArray
-    } else return "No hay actividades para mostrar"
+
+    var nuevoArray = actividadesSospechozas.map(function(actividad, indice){
+        return `Id: ${indice}, ${actividad}`
+    }) 
+    if(nuevoArray.length > 0) return nuevoArray
+    return  "No hay actividades para mostrar"
+
 }
 
 // <------- NO TOCAR -------->

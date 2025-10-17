@@ -1,19 +1,27 @@
-# 📌 ProyectoX - Nombre del Proyecto
+# 🔐 ProyectoM0 - Seguridad
 
 ## 🎯 Objetivo del Proyecto
-Breve descripción del objetivo.
+Desarrollar una página web enfocada en **seguridad**, que permita:
+- Monitorear actividades sospechosas 👀  
+- Crear y gestionar una caja fuerte 🔒  
+- Administrar usuarios y accesos 👤  
+
+Este proyecto busca aplicar conceptos de **JavaScript** y **backend básico** para simular un sistema de seguridad digital.
+
+---
 
 ## 💻 Tecnologías utilizadas
-- Lenguaje principal
-- Framework
-- Base de datos
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=fff&style=for-the-badge)
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=fff&style=for-the-badge)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=fff&style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
+![CSS3](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
+
+---
 
 ## ⚙️ Requisitos para instalar
-1. Paso 1
-2. Paso 2
-3. Paso 3
 
-## ▶️ Cómo ejecutar localmente
-```bash
-npm install
-npm run dev
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/LVVALENTINOVAZQUEZ/proyectoM0.git
